@@ -13,10 +13,10 @@ app.use(express.static("static"));
 app.get("/api/jobs", async (req, res) => {
   const url = "https://api.scrapingdog.com/linkedinjobs/";
   const params = {
-    api_key: "671e0bb38c56531351652c7b",
+    api_key: "678b3c8530ac26982bfe541d",
     field: "python",
     geoid: "100293800",
-    page: 1,
+    page: 1
   };
 
   try {
@@ -36,3 +36,30 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+
+
+// const axios = require('axios');
+
+// // Define the URL and parameters
+// const url = "https://api.scrapingdog.com/linkedinjobs/";
+// const params = {
+//   api_key: "678b3c8530ac26982bfe541d",
+//   field: "python",
+//   geoid: "100293800",
+//   page: 5
+// };
+
+// // Send a GET request with the parameters
+// let def = async () => {
+//   try {
+//     const response = await axios.get(url, { params });
+//     console.log(response.data);
+//   } catch (error) {
+//     console.error("API Error:", error.message);
+//     // console.log({ error: "Failed to fetch jobs" });
+//   }
+// }
+
+// def();
+
